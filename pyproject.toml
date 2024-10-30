@@ -78,3 +78,21 @@ python = ["3.10", "3.11"]
 [tool.hatch.envs.test.scripts]
 run_test_coverage = "pytest {args:--cov=mypackage --cov-report=term-missing}"
 run_test = "pytest"
+
+
+[tool.hatch.envs.format]
+description = """Environment that runs the code formatters."""
+extra-dependencies = [
+    "ruff",
+    "isort",
+]
+
+[tool.hatch.envs.format.scripts]
+format_code = [
+    "ruff .",
+    "black ."
+]
+
+
+
+
