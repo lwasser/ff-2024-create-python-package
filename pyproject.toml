@@ -11,7 +11,7 @@ requires = ["hatchling"]
 ################################################################################
 
 [project]
-name = "mypackage"
+name = "mypackage_lwasser2"
 
 version = "0.1.0"
 
@@ -61,8 +61,13 @@ only-packages = true
 [tool.hatch.build.targets.wheel]
 packages = ["src/mypackage"]
 
+[tool.hatch.publish.index.repos.test]
+url = "https://test.pypi.org/legacy/"
+user = "__token__"
+auth = "pypi-AgENdGVzdC5weXBpLm9yZwIkZDZhNmJhMzUtNTU0Mi00NTA2LWI1MmItMGExZDllZTZhODBmAAIqWzMsIjMxMzBmZTg4LTJlZTEtNDk4OC1hZWZiLTliN2Y3NmQ5ZDMzOCJdAAAGIFa5VLj7fpp6vNjCZDSR6dhybuoDSqMbXWCvumA85vqU"
 
-# Create Hatch enviroment 
+
+############
 
 [tool.hatch.envs.test]
 description = """Environment that runs the test suite"""
